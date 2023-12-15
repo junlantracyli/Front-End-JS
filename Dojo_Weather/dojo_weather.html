@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" type="text/css" href="dojo_weather.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top">
+        <div class="nav">
+            <h1>DojoWeather</h1>
+            <ul class="links">
+                <li onclick="message()"><a href="#">Burbank</a></li>
+                <li onclick="message()"><a href="#">Chicago</a></li>
+                <li onclick="message()"><a href="#">Dallas</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="city-name-row">
+            <h2>San Jose</h2>
+            <div class="temperature">
+                <h5>
+                    Show temperature in
+                    <select name="temp" onchange="convert(this)">
+                        <option>°C</option>
+                        <option>°F</option>
+                    </select>
+                </h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="weather-block">
+                <h1>Today</h1>
+                <img src="some_rain.png" alt="rain">
+                <h5>some rain</h5>
+                <p class="temperatures">
+                    <span style="color: crimson" id="temp1">24°</span>
+                    <span style="color:dodgerblue" id="temp2">18°</span>
+                </p>
+            </div>
+            <div class="weather-block">
+                <h1>Tomorrow</h1>
+                <img src="some_sun.png" alt="sun">
+                <h5>some sun</h5>
+                <p class="temperatures">
+                    <span style="color: crimson" id="temp3">27°</span>
+                    <span style="color:dodgerblue" id="temp4">19°</span>
+                </p>
+            </div>
+            <div class="weather-block">
+                <h1>Friday</h1>
+                <img src="some_clouds.png" alt="clouds">
+                <h5>some clouds</h5>
+                <p class="temperatures">
+                    <span style="color: crimson" id="temp5">21°</span>
+                    <span style="color:dodgerblue" id="temp6">16°</span>
+                </p>
+            </div>
+            <div class="weather-block">
+                <h1>Saturday</h1>
+                <img src="some_sun.png" alt="sun">
+                <h5>some sun</h5>
+                <p class="temperatures">
+                    <span style="color: crimson" id="temp7">26°</span>
+                    <span style="color:dodgerblue" id="temp8">21°</span>
+                </p>
+            </div>
+        </div>
+        <div class="cookie-message">
+            <img src="cookie.png" alt="cookies">
+            <div class="cookie-text">
+                <h3>Stop! Cookie Time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize<br>
+                    content and ads, to provide social media features and to<br>
+                    analyse our traffic. <a href="#"> Read more...</a> 
+                </p>
+            </div>    
+            <button class="accept-button" onclick="remove()">I Accept</button>
+        </div>
+    </div>
+    <script src="dojo_weather.js"></script>
+</body>
+</html>
